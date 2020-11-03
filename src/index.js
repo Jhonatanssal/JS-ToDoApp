@@ -1,5 +1,7 @@
 import Todo from './todo';
 
+
+
 const submitButton = document.getElementById('button');
 const taskContainer = document.getElementById('taskContainer');
 
@@ -62,5 +64,7 @@ function checkDone (done){
 
 }
 submitButton.addEventListener('click', onclick);
+
+export {todosArray, submitButton, tas}
 
 
