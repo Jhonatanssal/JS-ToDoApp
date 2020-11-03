@@ -1,1 +1,1 @@
-console.log("Works!");
+(()=>{"use strict";document.getElementById("button").addEventListener("click",(()=>{alert("work"),console.log("one")}))})();
