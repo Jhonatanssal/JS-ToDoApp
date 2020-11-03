@@ -1,12 +1,9 @@
 import Todo from './todo';
 
-
-
 const submitButton = document.getElementById('button');
 const taskContainer = document.getElementById('taskContainer');
 
 let todosArray=[]
-
 
 const onclick = (e)  => {
   e.preventDefault();
@@ -19,7 +16,6 @@ const onclick = (e)  => {
   console.log(priority);
   let todo = new Todo(title, description, date, priority, done);
   addTodo(todo);
-  
 };
 
 const addTodo = (todo) => {
@@ -28,6 +24,7 @@ const addTodo = (todo) => {
    todosArray.push(todo);
    createTodo(todosArray);
 }
+
 const createTodo = (todo) =>{
   console.log(todo);
   const priorityArray = ['High Priority', 'Mid Priority', 'Low Priority'];
@@ -39,32 +36,25 @@ const createTodo = (todo) =>{
     let todoDes = document.createElement('p');
     let todoDate = document.createElement('p');
     
-    
     todoT.textContent = todo[i].title;
     todoDes.textContent = todo[i].description;
     todoDate.textContent = todo[i].date;
-    
-
+  
     todoC.appendChild(todoT);
     todoC.appendChild(todoDes);
     todoC.appendChild(todoDate);
     taskContainer.appendChild(todoC);
   }
-  
-
-
-
 }
+
 function checkDone (done){
   if (done){
     return 'Completed'
   }else{
     return 'To Complete'
   }
-
 }
+
 submitButton.addEventListener('click', onclick);
 
 export {todosArray, submitButton, tas}
-
-

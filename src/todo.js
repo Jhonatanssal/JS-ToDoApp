@@ -1,6 +1,6 @@
-import Project from './projects'
+import Project from './projects';
 
-class Todo extends Project{
+class Todo extends Project {
   constructor(title, description, date, priority, done) {
     this.title = title;
     this.description = description;
@@ -8,8 +8,6 @@ class Todo extends Project{
     this.priotiry = priority;
     this.done = done;
   }
-} 
+}
 
-
- 
 export default Todo;
