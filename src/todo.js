@@ -1,6 +1,4 @@
-import Project from './projects';
-
-class Todo extends Project {
+class Todo {
   constructor(title, description, date, priority, done) {
     this.title = title;
     this.description = description;

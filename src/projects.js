@@ -1,5 +1,3 @@
-// import Todo from "./todo";
-
 const botonProject = document.getElementById('botonProject');
 const projectsCont = document.getElementById('projectsContainer');
 
@@ -33,37 +31,42 @@ const createProject = (projects) => {
     const proP = document.createElement('h1');
     const proB = document.createElement('button');
 
-    proC.classList.add('background-red');
-    proB.textContent = 'Save';
+    proC.classList.add('card', 'p-2');
+    proB.textContent = 'Add Task';
     proP.textContent = projects[i].name;
-    proB.type='button';
-    proB.className='btn btn-primary';
-    proB.dataToggle='modal';
-    proB.dataTarget='#exampleModal';
+    proB.type = 'button';
+    proB.className = 'btn btn-primary';
+    proB.dataToggle = 'modal';
+    proB.dataTarget = '#exampleModal';
 
 
     proB.addEventListener('click',()=>{
-        let modal=document.getElementsById('modal');
-        modal.innerHTML=`<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>`
 
+        proC.innerHTML += `<div class="taskForm">
+        <form id="form">
+          <div class="taskTitle form-group">
+            <input type="text" id="title" placeholder="Title" class="form-control">
+          </div>
+          <div class="description form-group">
+            <input type="text" id="description" placeholder="Description" class="form-control">
+          </div>
+          <div class="date form-group">
+            <input type="date" id="date" class="form-control">
+          </div>
+          <div class="priority form-group">
+            <select name="weapon" id="priority" class="form-control">
+              <option value="throwing_stars">High Priority</option>
+              <option value="sword">Mid Priority</option>
+              <option value="staff">Low Priority</option>
+            </select>
+          </div>
+          <div class="done form-group">
+            <label for="done">Completed: </label>
+            <input type="checkbox" id="done" name="done" class="form-control">
+          </div>
+          <input type="submit" id="button" class="btn btn-primary btn-block">
+        </form>
+      </div>`
     })
 
     proC.appendChild(proP);
@@ -81,6 +84,7 @@ function createStorage(list) {
     const myTodos = JSON.parse(localStorage.getItem('myTodos'));
     myTodos.unshift(list);
     localStorage.setItem('myTodos', JSON.stringify(myTodos));
-
   }
 }
+
+export { Project, createProject, createStorage };

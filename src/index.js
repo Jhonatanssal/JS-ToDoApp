@@ -1,9 +1,13 @@
 import Todo from './todo';
 
-const submitButton = document.getElementById('button');
+import { Project, createProject, createStorage } from './projects';
+
+
+
+/* const submitButton = document.getElementById('button');
 const taskContainer = document.getElementById('taskContainer');
 
-let todosArray=[]
+let todosArray = [];
 
 const onclick = (e)  => {
   e.preventDefault();
@@ -19,8 +23,6 @@ const onclick = (e)  => {
 };
 
 const addTodo = (todo) => {
-  
-   
    todosArray.push(todo);
    createTodo(todosArray);
 }
@@ -47,7 +49,7 @@ const createTodo = (todo) =>{
   }
 }
 
-function checkDone (done){
+function checkDone(done) {
   if (done){
     return 'Completed'
   }else{
@@ -55,6 +57,7 @@ function checkDone (done){
   }
 }
 
-submitButton.addEventListener('click', onclick);
+createProject(JSON.parse(localStorage.getItem('myTodos')));
 
-export {todosArray, submitButton, tas}
+submitButton.addEventListener('click', onclick);
+ */
