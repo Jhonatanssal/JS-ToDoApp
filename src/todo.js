@@ -1,4 +1,3 @@
-import { Project, createProject, createStorage, initTodo } from './projects';
 class Todo {
   constructor(title, description, date, priority, done) {
     this.title = title;
