@@ -1,24 +1,34 @@
+
+import Todo from './todo';
+import {onclick, createTodo} from './index'
 const botonProject = document.getElementById('botonProject');
 const projectsCont = document.getElementById('projectsContainer');
 
 class Project {
-  constructor(name, projects) {
+  
+  constructor(name) {
     this.name = name;
-    this.projects = projects;
+    this.projects = [];
   }
 }
 
-const projects = [];
 
-botonProject.addEventListener('click', (e) => {
-  e.preventDefault();
-  const todos = [];
-  const nameProject = document.getElementById('projectName').value;
-  const project = new Project(nameProject, todos);
-  
-  createStorage(project);
-  createProject(JSON.parse(localStorage.getItem('myTodos')))
-});
+
+function initTodo(){
+  botonProject.addEventListener('click', (e) => {
+    e.preventDefault();
+   
+    const nameProject = document.getElementById('projectName').value;
+    const project = new Project(nameProject);
+    
+    createStorage(project);
+    createProject(JSON.parse(localStorage.getItem('myTodos')))
+  });
+
+};
+
+initTodo()
+
 
 
 
@@ -116,7 +126,9 @@ const createProject = (projects) => {
 
         input6.addEventListener('click', (e)=>{
           e.preventDefault()
-          console.log('rter')
+          onclick(projects[i],i);
+          
+           
         });   
 
 
@@ -141,4 +153,4 @@ function createStorage(list) {
   }
 }
 
-export { Project, createProject, createStorage };
+export { Project, createProject, createStorage, initTodo };

@@ -1,32 +1,34 @@
 import Todo from './todo';
 
-import { Project, createProject, createStorage } from './projects';
+import { Project, createProject, createStorage, initTodo } from './projects';
 
 
 
-/* const submitButton = document.getElementById('button');
-const taskContainer = document.getElementById('taskContainer');
+
+
+
+
 
 let todosArray = [];
 
-const onclick = (e)  => {
-  e.preventDefault();
+const onclick = (project,index)  => {
+ 
   let title = document.getElementById('title').value;
   let description = document.getElementById('description').value;
   let date = document.getElementById('date').value;
   let priority = document.getElementById('priority').selectedIndex;
   let done = document.getElementById('done').checked;
 
-  console.log(priority);
+  
   let todo = new Todo(title, description, date, priority, done);
-  addTodo(todo);
+  console.log(todo,project.name)
+  const myTodos = JSON.parse(localStorage.getItem('myTodos'))
+  myTodos[index].projects.unshift(todo);
+  localStorage.setItem('myTodos', JSON.stringify(myTodos));
+
 };
 
-const addTodo = (todo) => {
-   todosArray.push(todo);
-   createTodo(todosArray);
-}
-
+/*
 const createTodo = (todo) =>{
   console.log(todo);
   const priorityArray = ['High Priority', 'Mid Priority', 'Low Priority'];
@@ -61,3 +63,5 @@ createProject(JSON.parse(localStorage.getItem('myTodos')));
 
 submitButton.addEventListener('click', onclick);
  */
+
+export default onclick
