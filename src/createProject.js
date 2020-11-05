@@ -1,6 +1,4 @@
 /* eslint-disable import/no-cycle */
-
-import clear from './clear';
 import onclick from './onclick';
 import editForm from './editForm';
 
@@ -21,8 +19,8 @@ const completedText = (completed) => {
 const createProject = (projects) => {
   projectsCont.innerHTML = '';
   projectsCont.classList.add('align');
-  
-    
+
+
   for (let i = 0; i < projects.length; i += 1) {
     const proC = document.createElement('div');
     const proP = document.createElement('h1');
@@ -72,7 +70,7 @@ const createProject = (projects) => {
       taskEdit.addEventListener('click', (e) => {
         e.preventDefault();
         proC.innerHTML += '';
-        editForm(i, j, proC);
+        editForm(i, j);
       });
 
       taskCont.appendChild(taskT);
@@ -87,11 +85,10 @@ const createProject = (projects) => {
     }
 
     proB.addEventListener('click', () => {
-    
-      const modall=document.createElement('div');
-      modall.className='modd';
+      const modall = document.createElement('div');
+      modall.className = 'modd';
       document.body.appendChild(modall);
-      projectsCont.className='fadee align'
+      projectsCont.className = 'fadee align';
       const contF = document.createElement('div');
       const form = document.createElement('form');
       const contI1 = document.createElement('div');
@@ -112,7 +109,7 @@ const createProject = (projects) => {
 
       contF.className = 'taskForm';
       form.id = 'form';
-      form.classList='p-3 border'
+      form.classList = 'p-3 border';
       contI1.className = 'taskTitle form-group';
       input1.type = 'text';
       input1.id = 'title';
@@ -149,6 +146,7 @@ const createProject = (projects) => {
       label5.textContent = 'Completed: ';
       input6.type = 'submit';
       input6.id = 'button';
+      input6.value = 'Create Task';
       input6.className = 'btn btn-primary btn-block';
 
       contI5.appendChild(input5);
@@ -169,7 +167,11 @@ const createProject = (projects) => {
       contF.appendChild(form);
       modall.appendChild(contF);
       input6.addEventListener('click', () => {
-        onclick(i);
+        if (input1.value === '' && input2.value === '' && input3.value === '') {
+          alert("Title, description an date can't be empty");
+        } else {
+          onclick(i);
+        }
       });
     });
 

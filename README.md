@@ -1,65 +1,62 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# JavaScript To-do List
+ This is a project is a to-do list that work with classes and webpack.
 
-# Project Name
+![screenshot](./img/image.png)
 
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Bootstrap
+- HTML5
+- Eslint
+- Stylelintrc
+- Webpack
 
 ## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+[Live Demo Link](https://alexoid1.github.io/Library/)
+ 
 
 ### Prerequisites
 
-### Setup
+Node 
+Bootstrap
+npm
 
-### Install
+## Getting Started
 
-### Usage
+To get a local copy up and running follow these simple example steps:
 
-### Run tests
+- Go to https://github.com/Alexoid1/Library and clone the repo using: <br>
+`git clone https://github.com/Alexoid1/Library.git` in your terminal.
 
-### Deployment
+### Github Actions
 
+To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+
+1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
+2. Create the `feature/branch` and push.
+3. Start working on your milestone as usual.
+4. Open a PR from the `feature/branch` when your work is done.
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Jhonatan Sarrazola**
+- Github: [@jssarrazolaa](https://github.com/jssarrazolaa)
+- Twitter: [@StevenAlvarez_](https://twitter.com/StevenAlvarez_)
+- Linkedin: [Jhonatan Sarrazola](https://www.linkedin.com/in/jhonatan-sarrazola-6a46a01a5/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+👤 **Pablo Alexis Zambrano Coral**
+- Github: [@Alexoid1](https://github.com/Alexoid1)
+- Twitter: [@Alexis Zambrano_acz](https://twitter.com/pablo_acz)
+- Linkedin: [linkedin](https://www.linkedin.com/in/pablo-alexis-zambrano-coral-7a614a189/)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Alexoid1/Library/issues).
 
 ## Show your support
 
@@ -67,9 +64,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- The Odin Project
+- DOM elements
 
 ## 📝 License
 
