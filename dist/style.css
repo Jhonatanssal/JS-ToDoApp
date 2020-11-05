@@ -1,0 +1,17 @@
+.align {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modd {
+  position: fixed;
+  top: 20%;
+  right: 40%;
+  background: white;
+  z-index: 200;
+}
+
+.fadee {
+  filter: blur(10px);
+  transition:all 0.5s ease-out;
+}
