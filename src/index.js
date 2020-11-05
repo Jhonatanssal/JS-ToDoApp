@@ -1,19 +1,18 @@
-import { Project, createProject, createStorage } from './projects';
+import Project from './projects';
+import createStorage from './storage';
+import createProject from './createProject';
 
 const botonProject = document.getElementById('botonProject');
-let todosArray = [];
 
-function initTodo(){
-  botonProject.addEventListener('click', (e) => {   
+function initTodo() {
+  botonProject.addEventListener('click', () => {
     const nameProject = document.getElementById('projectName').value;
     const project = new Project(nameProject);
-    
+
     createStorage(project);
     createProject(myTodos[project].projects);
   });
-};
-
-
+}
 
 initTodo();
 
