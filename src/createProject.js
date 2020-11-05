@@ -21,6 +21,8 @@ const completedText = (completed) => {
 const createProject = (projects) => {
   projectsCont.innerHTML = '';
   projectsCont.classList.add('align');
+  
+    
   for (let i = 0; i < projects.length; i += 1) {
     const proC = document.createElement('div');
     const proP = document.createElement('h1');
@@ -85,7 +87,11 @@ const createProject = (projects) => {
     }
 
     proB.addEventListener('click', () => {
-      clear();
+    
+      const modall=document.createElement('div');
+      modall.className='modd';
+      document.body.appendChild(modall);
+      projectsCont.className='fadee align'
       const contF = document.createElement('div');
       const form = document.createElement('form');
       const contI1 = document.createElement('div');
@@ -106,6 +112,7 @@ const createProject = (projects) => {
 
       contF.className = 'taskForm';
       form.id = 'form';
+      form.classList='p-3 border'
       contI1.className = 'taskTitle form-group';
       input1.type = 'text';
       input1.id = 'title';
@@ -160,8 +167,7 @@ const createProject = (projects) => {
       form.appendChild(contI5);
       form.appendChild(input6);
       contF.appendChild(form);
-      proC.appendChild(contF);
-
+      modall.appendChild(contF);
       input6.addEventListener('click', () => {
         onclick(i);
       });

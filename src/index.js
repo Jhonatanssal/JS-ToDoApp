@@ -9,10 +9,10 @@ function initTodo() {
     const nameProject = document.getElementById('projectName').value;
     const project = new Project(nameProject);
 
-    const myTodos = JSON.parse(localStorage.getItem('myTodos'));
+    
 
     createStorage(project);
-    createProject(myTodos[project].projects);
+    
   });
 }
 
