@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+
 import clear from './clear';
 import onclick from './onclick';
 import editForm from './editForm';
@@ -19,7 +21,7 @@ const completedText = (completed) => {
 const createProject = (projects) => {
   projectsCont.innerHTML = '';
   projectsCont.classList.add('align');
-  for (let i = 0; i < projects.length; i++) {
+  for (let i = 0; i < projects.length; i += 1) {
     const proC = document.createElement('div');
     const proP = document.createElement('h1');
     const proB = document.createElement('button');
@@ -35,7 +37,7 @@ const createProject = (projects) => {
 
     proC.appendChild(proP);
 
-    for (let j = 0; j < projects[i].projects.length; j++) {
+    for (let j = 0; j < projects[i].projects.length; j += 1) {
       const taskCont = document.createElement('div');
       const taskT = document.createElement('h3');
       const taskD = document.createElement('p');
@@ -56,10 +58,8 @@ const createProject = (projects) => {
       taskEdit.className = 'btn btn-success';
       taskDelete.className = 'btn btn-danger mt-2';
 
-      const va = projects[i];
       taskDelete.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(i, j, va);
         const myTodos = JSON.parse(localStorage.getItem('myTodos'));
         myTodos[i].projects.splice(j, 1);
 

@@ -1,10 +1,10 @@
+/* eslint-disable import/no-cycle */
+
 import update from './edit';
 
 const editForm = (i, j, proC) => {
   const myTodos = JSON.parse(localStorage.getItem('myTodos'));
   const editData = myTodos[i].projects[j];
-  console.log(myTodos);
-  console.log(editData);
 
   const contF = document.createElement('div');
   const form = document.createElement('form');
