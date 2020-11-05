@@ -1,5 +1,3 @@
-/* eslint-disable import/no-cycle */
-
 import update from './edit';
 
 const editForm = (i, j) => {
@@ -93,9 +91,7 @@ const editForm = (i, j) => {
   contF.appendChild(form);
   modall.appendChild(contF);
   input6.addEventListener('click', () => {
-    if (input1.value === '' && input2.value === '' && input3.value === '') {
-      alert("Title, description an date can't be empty");
-    } else {
+    if (input1.value !== '' && input2.value !== '' && input3.value !== '') {
       update(i, j);
     }
   });

@@ -1,5 +1,3 @@
-/* eslint-disable import/no-cycle */
-
 import onclick from './onclick';
 import editForm from './editForm';
 
@@ -195,9 +193,7 @@ const createProject = (projects) => {
       contF.appendChild(form);
       modall.appendChild(contF);
       input6.addEventListener('click', () => {
-        if (input1.value === '' && input2.value === '' && input3.value === '') {
-          alert("Title, description an date can't be empty");
-        } else {
+        if (input1.value !== '' && input2.value !== '' && input3.value !== '') {
           onclick(i);
         }
       });

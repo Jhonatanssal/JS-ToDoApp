@@ -1,5 +1,3 @@
-/* eslint-disable import/no-cycle */
-
 import createProject from './createProject';
 
 const update = (i, j) => {

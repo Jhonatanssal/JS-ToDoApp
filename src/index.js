@@ -9,9 +9,7 @@ function initTodo() {
     const nameProject = document.getElementById('projectName').value;
     const project = new Project(nameProject);
 
-    if (nameProject === '') {
-      alert('Project has to have a name!');
-    } else {
+    if (nameProject !== '') {
       createStorage(project);
     }
   });
