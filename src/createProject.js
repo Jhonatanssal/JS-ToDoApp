@@ -1,4 +1,5 @@
 /* eslint-disable import/no-cycle */
+
 import onclick from './onclick';
 import editForm from './editForm';
 
@@ -47,6 +48,9 @@ const createProject = (projects) => {
       const taskEdit = document.createElement('button');
       const taskDelete = document.createElement('button');
       taskCont.classList.add('card', 'border', 'p-3', 'mb-2');
+      const taskInfoContainer = document.createElement('div');
+      const showTask = document.createElement('button');
+      const hideTask = document.createElement('button');
 
       taskT.textContent = projects[i].projects[j].title;
       taskD.textContent = projects[i].projects[j].description;
@@ -55,8 +59,17 @@ const createProject = (projects) => {
       taskC.textContent = completedText(projects[i].projects[j].done);
       taskEdit.textContent = 'Edit';
       taskDelete.textContent = 'Delete';
-      taskEdit.className = 'btn btn-success';
-      taskDelete.className = 'btn btn-danger mt-2';
+      taskEdit.className = 'btn btn-success btn-block';
+      taskDelete.className = 'btn btn-danger btn-block mt-2';
+      taskInfoContainer.style.display = 'none';
+      taskInfoContainer.id = 'infoTaskContainer';
+      showTask.id = 'showTask';
+      hideTask.id = 'hideTask';
+      showTask.className = 'btn btn-info';
+      hideTask.className = 'btn btn-warning';
+      hideTask.style.display = 'none';
+      hideTask.textContent = 'Hide';
+      showTask.textContent = 'Show';
 
       taskDelete.addEventListener('click', (e) => {
         e.preventDefault();
@@ -73,13 +86,28 @@ const createProject = (projects) => {
         editForm(i, j);
       });
 
+      showTask.addEventListener('click', () => {
+        taskInfoContainer.style.display = 'block';
+        showTask.style.display = 'none';
+        hideTask.style.display = 'block';
+      });
+
+      hideTask.addEventListener('click', () => {
+        taskInfoContainer.style.display = 'none';
+        showTask.style.display = 'block';
+        hideTask.style.display = 'none';
+      });
+
       taskCont.appendChild(taskT);
       taskCont.appendChild(taskD);
-      taskCont.appendChild(taskDate);
-      taskCont.appendChild(taskPriority);
-      taskCont.appendChild(taskC);
-      taskCont.appendChild(taskEdit);
-      taskCont.appendChild(taskDelete);
+      taskCont.appendChild(showTask);
+      taskCont.appendChild(hideTask);
+      taskInfoContainer.appendChild(taskDate);
+      taskInfoContainer.appendChild(taskPriority);
+      taskInfoContainer.appendChild(taskC);
+      taskInfoContainer.appendChild(taskEdit);
+      taskInfoContainer.appendChild(taskDelete);
+      taskCont.appendChild(taskInfoContainer);
 
       proC.appendChild(taskCont);
     }
