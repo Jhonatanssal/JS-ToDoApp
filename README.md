@@ -14,7 +14,7 @@
 - Webpack
 
 ## Live Demo
-[Live Demo Link](https://alexoid1.github.io/Library/)
+[Live Demo Link](https://rawcdn.githack.com/jssarrazolaa/JS-ToDoApp/6cdadfe0effbf06ae8d9edc6e96c25e94a8eaf0e/dist/index.html)
  
 
 ### Prerequisites
@@ -27,8 +27,8 @@ npm
 
 To get a local copy up and running follow these simple example steps:
 
-- Go to https://github.com/Alexoid1/Library and clone the repo using: <br>
-`git clone https://github.com/Alexoid1/Library.git` in your terminal.
+- Go to https://github.com/jssarrazolaa/JS-ToDoApp and clone the repo using: <br>
+`git clone https://github.com/jssarrazolaa/JS-ToDoApp.git` in your terminal.
 
 ### Github Actions
 
@@ -56,7 +56,7 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Alexoid1/Library/issues).
+Feel free to check the [issues page](https://github.com/jssarrazolaa/JS-ToDoApp/issues).
 
 ## Show your support
 
