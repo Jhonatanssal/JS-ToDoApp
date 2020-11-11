@@ -1,7 +1,7 @@
 # JavaScript To-do List
  This is a project is a to-do list that work with classes and webpack.
 
-![screenshot](./img/image.png)
+![screenshot](./app_screenshot.png)
 
 
 ## Built With
