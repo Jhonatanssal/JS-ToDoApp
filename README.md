@@ -12,6 +12,7 @@
 - Eslint
 - Stylelintrc
 - Webpack
+- Jest
 
 ## Live Demo
 [Live Demo Link](https://rawcdn.githack.com/jssarrazolaa/JS-ToDoApp/6cdadfe0effbf06ae8d9edc6e96c25e94a8eaf0e/dist/index.html)
@@ -19,9 +20,10 @@
 
 ### Prerequisites
 
-Node 
-Bootstrap
-npm
+- Node 
+- Bootstrap
+- npm
+- Jest
 
 ## Getting Started
 
@@ -29,6 +31,10 @@ To get a local copy up and running follow these simple example steps:
 
 - Go to https://github.com/jssarrazolaa/JS-ToDoApp and clone the repo using: <br>
 `git clone https://github.com/jssarrazolaa/JS-ToDoApp.git` in your terminal.
+
+## Running tests
+
+After running `npm install` you will have Jest active, so to run the tests you have to run: `npm test` and it will display all of the tests in the console.
 
 ### Github Actions
 
@@ -38,7 +44,6 @@ To make sure the linters' checks using Github Actions work properly, you should 
 2. Create the `feature/branch` and push.
 3. Start working on your milestone as usual.
 4. Open a PR from the `feature/branch` when your work is done.
-
 
 ## Authors
 
@@ -66,7 +71,6 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - The Odin Project
-- DOM elements
 
 ## 📝 License
 
